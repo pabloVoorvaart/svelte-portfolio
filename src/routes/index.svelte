@@ -7,13 +7,17 @@
 <script>
     import Home from '../components/Home.svelte';
     import Intro from '../components/Intro.svelte';
+    import Resume from '../components/Resume.svelte';
+
 
 	const options = [
 		{ page: 'home',   component: Home },
 		{ page: 'Intro', component: Intro },
+        { page: 'Resume', component: Resume },
+
 	];
 
-    let i = 0;
+    let i = 2;
     const updateIndex = (newIndex) => {
         console.log(newIndex)
         i = newIndex
@@ -23,7 +27,7 @@
 </script>
 
 <div class="min-h-screen w-full bg-rose flex flex-col">
-    <div class="h-32 flex flex-row" id="header">
+    <div class="h-24 flex flex-row" id="header">
         {#if i === 0}
             <div class="h-32" id="header">
                 <p class="font-monserrat p-5 text-customBlack text-lg">[Pablo Voorvaart]</p>
